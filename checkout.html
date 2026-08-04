@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout page</title>
+</head>
+<body>
+    <table border="6" style="width: 100%; border-collapse: separate; text-align: left;">
+        <!--This is the top header row-->
+        <!--border = "1" : it drew the line so it looks like a grid, but later changed to 6 for a design-->
+        <!--the style till collapse : it stretched the line across the screen-->
+        <tr style="background-color: goldenrod; color: white;">
+            <th>Items Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <!--This is the first row of data-->
+        <tr>
+            <td>The Jollof Pot</td>
+            <td>Morning dish</td>
+            <td>1</td>
+            <td>#2000</td>
+        </tr>
+
+        <!--This is the second row of data-->
+        <tr>
+            <td>Custom Request Pot</td>
+            <td>A pot of egusi & A pot of stew</td>
+            <td>2</td>
+        <td>#5000</td>
+        </tr>
+    </table>
+    <h2>Delivery Details</h2>
+    <form action="tracker.html" method="get">
+        <!--Name Input-->
+        <p>
+            <label for="student-name">Your Full Name:</label><br>
+            <input type="text" id="student-name" required placeholder="e.g. Adeyemi Tutu">
+        </p>
+
+        <!--Phone Number Input-->
+        <p>
+            <label for="student-phone">Whatsapp/Phone number:</label><br>
+            <input type="tel" id="student-phone" required placeholder="e.g. 08148163314">
+        </p>
+
+        <!--Hostel Address Input-->
+        <p>
+            <label for="hostel-address">Hostel Name</label><br>
+            <input type="text" id="hostel-address" required placeholder="e.g Queens hall">
+        </p>
+
+        <!--Special Requests Input-->
+        <p>
+            <label for="Cooking notes">Special Delivery or Cooking Instructions:</label><br>
+            <textarea id="cooking-notes" rows="4" cols="40" placeholder="e.g No onions and make it spicy, deliver before 2PM"></textarea>
+         </p>
+
+         <!--Order Button-->
+         <p>
+            <button type="submit" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+                Confirm Order & Track Delivery
+            </button>
+         </p>
+            
+    </form>
+    
+</body>
+</html>
