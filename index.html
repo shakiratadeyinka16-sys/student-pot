@@ -3,20 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentPot </title>
+    <title>StudentPot</title>
     <link rel="stylesheet" href="restaurant.css">
-</head> 
+</head>
 <body>
-    <div class="header-band">
-    <h1>Student Pot</h1>
-    <h2>Your Personal Campus Kitchen</h2>
-    </div>
-    <p>How it works</p>
-    <ol>
-        <li>Check out what we are cooking today or tell us your custom request.</li>
-        <li>Go to the checkout page to enter your delivery.</li>
-        <li>Track your pot until it arrives hot.</li>
-    </ol>
-    <a href="checkout.html" target="_self" > Go to Checkout to place order</a>
+    <main class="page">
+        <div class="header-band">
+            <h1>Student Pot</h1>
+            <h2>Your Personal Campus Kitchen</h2>
+        </div>
+
+        <h3 class="section-title">How it works</h3>
+        <ol class="steps">
+            <li>Check out what we are cooking today or tell us your custom request.</li>
+            <li>Go to the checkout page to enter your delivery.</li>
+            <li>Track your pot until it arrives hot.</li>
+        </ol>
+
+        <h3 class="section-title">Today's menu</h3>
+        <div class="menu" id="menu"></div>
+
+        <a class="btn" href="checkout.html">Go to Checkout to place order</a>
+    </main>
+
+    <script>
+        // Edit this list to change the menu
+        const menu = [
+            {icon: "\u{1F372}", name: "The Jollof Pot", desc: "Morning dish", price: 2000},
+            {icon: "\u{1F963}", name: "Garri mix + peppered ponmo", desc: "On the pot today", price: 2500},
+            {icon: "\u{1F35B}", name: "Custom Request Pot", desc: "Tell us what to cook, e.g. a pot of egusi & a pot of stew", price: 5000}
+        ];
+
+        const menuEl = document.getElementById("menu");
+        menu.forEach(function (item) {
+            const card = document.createElement("div");
+            card.className = "dish";
+
+            const top = document.createElement("div");
+            top.className = "dish-top";
+            top.textContent = item.icon;
+
+            const body = document.createElement("div");
+            body.className = "dish-body";
+            const name = document.createElement("h4");
+            name.textContent = item.name;
+            const desc = document.createElement("p");
+            desc.textContent = item.desc;
+            const price = document.createElement("div");
+            price.className = "price";
+            price.textContent = "\u20A6" + item.price.toLocaleString();
+
+            body.append(name, desc, price);
+            card.append(top, body);
+            menuEl.appendChild(card);
+        });
+    </script>
 </body>
 </html>

@@ -4,12 +4,12 @@ A campus food ordering & delivery tracker built as part of my web dev learning j
 # Live site
 https://shakiratadeyinka16-sys.github.io/student-pot/
 
-## Built with 
-- HTML(current)
-- CSS(in progress)
-- Javasript(planned)
+## Built with
+- HTML
+- CSS
+- JavaScript (menu rendered from a list)
 
 ## Pages
-- Home
+- Home (how it works + today's menu)
 - Checkout
 - Order Tracker

@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tracker page</title>
+    <link rel="stylesheet" href="restaurant.css">
 </head>
 <body>
-    <h1>Track Your Student Pot</h1>
-    <p>Thank you for your order! Your food is being prepared with love. </p>
-    <hr>
-<h2>Order Status</h2>
+    <main class="page">
+        <div class="header-band compact">
+            <a href="index.html"><h1>Student Pot</h1></a>
+            <h2>Track Your Student Pot</h2>
+        </div>
 
-<ol style="font-size: 18px; line-height: 2;">
-    <!--Step 1: Completed Status (green text)-->
-    <li style="color: green; font-weight: bold;"> Order Received & Confimed</li>
+        <div class="card">
+            <p>Thank you for your order! Your food is being prepared with love.</p>
+        </div>
 
-    <!--Step 2: Current active status (bolded/highlighted text)-->
-    <li style="color: orange; font-weight: bold;">Kitchen is cooking your Pot....</li>
+        <h3 class="section-title">Order Status</h3>
+        <div class="card">
+            <ol class="timeline">
+                <!-- done = green tick, current = pulsing gold, no class = upcoming -->
+                <li class="done">Order Received &amp; Confirmed</li>
+                <li class="current">Kitchen is cooking your pot&hellip;</li>
+                <li>Out for delivery to your Hostel</li>
+                <li>Arrived at your Door</li>
+            </ol>
+        </div>
 
-    <!--Step 3: Upcoming status(faded gray text)-->
-    <li style="color: gray;">Out for delivery to your Hostel</li>
+        <div class="card eta">
+            <span class="note">Estimated Waiting Time</span>
+            <strong>30-45 minutes</strong>
+        </div>
 
-    <!--Step 4: Upcoming status(faded gray text)-->
-    <li style="color: gray;">Arrived at your Door</li>
-</ol>
-
-<hr>
-<p><strong>Estimated Waiting Time:</strong> 30-45 minutes</p>
-    
+        <a class="btn" href="index.html">Back to home</a>
+    </main>
 </body>
 </html>
